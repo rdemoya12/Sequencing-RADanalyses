@@ -124,6 +124,7 @@ legend('bottomleft',legend = c('WT','NV','SV'),
 ```
 
 ![](MZsap130a_vs_AB_36hpf_wholeEmbryo_files/figure-gfm/MDS%20before-1.png)<!-- -->
+
 Euclidean distances on the plot approximate the typical log2 fold
 changes between the samples. Distances on the plot can be interpreted as
 leading log2-fold-change, meaning the typical (root-mean-square)
@@ -165,11 +166,6 @@ differences between WT and the *MZsap130a* mutants
 
 ``` r
 library("ggplot2")
-```
-
-    ## Warning: package 'ggplot2' was built under R version 4.4.3
-
-``` r
 # Another MDS plot to look at sample grouping
 mds_edger2 <- plotMDS(y_edgeR,gene.selection = "common",
                       top = nrow(y_edgeR),
@@ -213,6 +209,7 @@ abline(h=0, col="red", lty=2, lwd=2)
 ```
 
 ![](MZsap130a_vs_AB_36hpf_wholeEmbryo_files/figure-gfm/Normalization%20check%20SV-1.png)<!-- -->
+
 All groups are centered around zero as expected, so the TMM
 normalization worked well to removed composition bias from the libraries
 
