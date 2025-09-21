@@ -435,13 +435,6 @@ library('ggplot2')
 
 # Load packages
 suppressMessages(library('tidyverse'))
-```
-
-    ## Warning: package 'tibble' was built under R version 4.4.3
-
-    ## Warning: package 'purrr' was built under R version 4.4.3
-
-``` r
 library('ggrepel')
 ```
 
