@@ -349,7 +349,7 @@ text(x = 11,y =0.4, labels = round(bcv, digits = 5))
 
 ![](MZsap130a_vs_AB_36hpf_wholeEmbryo_files/figure-gfm/BCV%20plot%20WTvsMZsap130a-1.png)<!-- -->
 
-### Now we fit the model using glmQLFit()
+### Now we fit the model using `glmQLFit()`
 
 ``` r
 # Fit to the model comparing WTvsNVvsSV
@@ -366,7 +366,7 @@ estimates an entirely different QL dispersion for each gene. In
 contrast, `glmFit()` uses the tagwise NB dispersion to fit a GLM - and
 that’s it.
 
-### Finally the analysis using glmQFLTest() and topTags() on the fitted data from the previous step
+### Finally the analysis using `glmQFLTest()` and `topTags()` on the fitted data from the previous step
 
 ``` r
 # The analysis for WT vs NV vs SV, ANOVA-like edgeR
@@ -438,7 +438,7 @@ suppressMessages(library('tidyverse'))
 library('ggrepel')
 ```
 
-### Data preparation for volcano plots
+### Data preparation for volcano plots WT vs SV
 
 ``` r
 volcano_datSV <- data.frame (GeneNames = rownames(edgeR.results_ql),
@@ -458,7 +458,7 @@ volcano_datSV <- volcano_datSV %>%
   )
 ```
 
-### Lets make another for WT vs NV
+### Let’s make another for WT vs NV
 
 ``` r
 volcano_datNV <- data.frame (GeneNames = rownames(edgeR.results_ql),
@@ -610,6 +610,6 @@ This report summarizes the basic pipeline used to analyze the
 *MZsap130a* and *MZsap130b* whole embryo RNAseq data sets. All plots for
 the associated publication were made using `ggplot2`, `heatmap3`,
 `viridisLite`, `reshape2`, `dendextend`, `tidyverse`, and `ggrepel`. The
-data is explored and analyzed here based on the edgeR user’s guide found
-here at
+data is explored and analyzed here based on the `edgeR` user’s guide
+found here at
 [Bioconductor](https://bioconductor.org/packages/release/bioc/html/edgeR.html)
